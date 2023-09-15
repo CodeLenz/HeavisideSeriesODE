@@ -7,11 +7,11 @@ for solving coupled systems of second order ODEs with constant coefficients
 
 with initial conditions
 
- $Y(t_0) = U0$
+ $Y(0) = U0$
 
 and
 
- $V(t_0) = V0$
+ $V(0) = V0$
 
 where $t$ is the independent variable, $Y(t)$ a $n \times 1$ vector (dependent variables), $V$ its first derivative with respect to $t$ and $A$ its second derivative. Matrices  $M$, $C$ and $K$ are $n \times n$. Vector $F(t)$ is addressed in the following.
  
