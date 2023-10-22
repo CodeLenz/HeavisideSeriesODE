@@ -140,9 +140,6 @@ function Solve_HS1(M::AbstractArray{TF}, C::AbstractArray{TF}, K::AbstractArray{
     # Calculates F11 squared
     F11_squared = F11*F11
 
-    # Calculates F11 cubic
-    F11_cubic = F11_squared*F11
-
     # Calculates exp(-delta t*F11)
     expF11_delta = exp(-Δt*F11)
     
@@ -183,7 +180,7 @@ function Solve_HS1(M::AbstractArray{TF}, C::AbstractArray{TF}, K::AbstractArray{
         expCF_delta = exp(-Δt*CbF)
 
         # Evaluate the response        
-        CbFFnotconj!(response,K,M,CbF,F11,F11_squared,F11_cubic,expF11_delta,expCF_delta,
+        CbFFnotconj!(response,K,M,CbF,F11,F11_squared,expF11_delta,expCF_delta,
                     dim,n_excitedDOF,times,n_times,dofs_loads,loads,int_load,C1,C2)
 
     end
