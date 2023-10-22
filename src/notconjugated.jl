@@ -3,7 +3,7 @@
 function CbFFnotconj!(response::Array{TC}, K::AbstractArray, M::AbstractArray, 
       CbF::AbstractArray, F11::AbstractArray, F11_squared::AbstractArray,
       expF11_delta::AbstractArray, expCF_delta::AbstractArray,
-      dim::Int64, n_excitedDOF::Int64, times::Ts, n_times::Int64, input_vectors::Matrix{TF},
+      dim::Integer, n_excitedDOF::Integer, times::Ts, n_times::Integer, input_vectors::Matrix{TF},
       loads::Matrix{TF}, int_loads::Matrix{TF},C1::Vector, C2::Vector) where {Ts,TC,TF}
 
 

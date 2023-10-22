@@ -5,7 +5,7 @@
 
 # Defines a function to evaluate the integration constants
 function CI_HS1(C_bar::AbstractArray{TF}, F11::AbstractArray{TC}, 
-                CbF::AbstractArray{TC},n_excitedDOF::Int64, U0::Vector, 
+                CbF::AbstractArray{TC}, U0::Vector, 
                 V0::Vector) where {TF,TC}
 
     # Calculates C2
@@ -21,7 +21,7 @@ end
 ########################################################################
 #                         Coefficients                                 #
 ########################################################################
-function Coefficients_a_HS1(i::Int64,j::Int64,n_times::Int64,dt::TF,
+function Coefficients_a_HS1(i::Integer,j::Integer,n_times::Int64,dt::TF,
                             times::Ts,loads::Matrix{TF},int_loads::Matrix{TF}) where {Ts,TF}
 
     

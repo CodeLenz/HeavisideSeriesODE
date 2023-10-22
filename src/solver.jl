@@ -152,7 +152,7 @@ function Solve_HS1(M::AbstractArray{TF}, C::AbstractArray{TF}, K::AbstractArray{
     if norm(U0)!=0 || norm(V0)!=0
 
         # Calculates initial conditions
-        C1, C2 = CI_HS1(C_bar, F11, CbF, n_excitedDOF, U0, V0)
+        C1, C2 = CI_HS1(C_bar, F11, CbF, U0, V0)
 
     else
 
