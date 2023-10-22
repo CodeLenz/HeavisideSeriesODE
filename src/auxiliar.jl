@@ -21,7 +21,7 @@ end
 ########################################################################
 #                         Coefficients                                 #
 ########################################################################
-function Coefficients_a_HS1(i::Integer,j::Integer,n_times::Int64,dt::TF,
+function Coefficients_a_HS1(i::Integer,j::Integer,n_times::Integer,dt::TF,
                             times::Ts,loads::Matrix{TF},int_loads::Matrix{TF}) where {Ts,TF}
 
     
