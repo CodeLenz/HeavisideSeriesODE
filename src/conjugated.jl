@@ -2,7 +2,7 @@
 # complex conjugate and the initial conditions are not homogeneous
 function CbFFconj!(response::Array{TC}, K::AbstractArray, M::AbstractArray, 
                    CbF::AbstractArray, F11::AbstractArray, F11_squared::AbstractArray,
-                   F11_cubic::AbstractArray, expF11_delta::AbstractArray, dim::Int64,
+                   expF11_delta::AbstractArray, dim::Int64,
                    n_excitedDOF::Int64, times::Ts, n_times::Int64, input_vectors::Matrix{TF}, 
                    loads::Matrix{TF},int_loads::Matrix{TF},C2::Vector) where {Ts,TC,TF}
  

@@ -78,7 +78,7 @@ function Solve_HS1(M::AbstractArray{TF}, C::AbstractArray{TF}, K::AbstractArray{
     Δt = times[2]-times[1]
 
     # If int_loads is empty, we can evaluate by using the trapezoidal rule
-    if int_loads==nothing
+    if isnothing(int_loads)
 
         # Trapezoidal rule
         int_load = Integral_load(loads,Δt) 
@@ -174,7 +174,7 @@ function Solve_HS1(M::AbstractArray{TF}, C::AbstractArray{TF}, K::AbstractArray{
     if norm_conjugacy<tol_conj
 
         # Evaluate the response
-        CbFFconj!(response,K,M,CbF,F11,F11_squared,F11_cubic,expF11_delta,dim,
+        CbFFconj!(response,K,M,CbF,F11,F11_squared,expF11_delta,dim,
                 n_excitedDOF,times,n_times,dofs_loads,loads,int_load,C2)
 
     else

@@ -2,7 +2,7 @@
 # not complex conjugate and the initial conditions are not homogeneous
 function CbFFnotconj!(response::Array{TC}, K::AbstractArray, M::AbstractArray, 
       CbF::AbstractArray, F11::AbstractArray, F11_squared::AbstractArray,
-      F11_cubic::AbstractArray, expF11_delta::AbstractArray, expCF_delta::AbstractArray,
+      expF11_delta::AbstractArray, expCF_delta::AbstractArray,
       dim::Int64, n_excitedDOF::Int64, times::Ts, n_times::Int64, input_vectors::Matrix{TF},
       loads::Matrix{TF}, int_loads::Matrix{TF},C1::Vector, C2::Vector) where {Ts,TC,TF}
 
@@ -17,7 +17,7 @@ function CbFFnotconj!(response::Array{TC}, K::AbstractArray, M::AbstractArray,
     Ω_4 = K.-(M*F11_squared)
 
     # Calculates matrix Omega_5
-    Ω_5 = Ω_3.-(M*F11_cubic)
+    Ω_5 = Ω_3.-(M*F11_squared*F11)
 
     # Initializes and calculates a matrix for the vector x_ij for each matrix Gamma_i 
     X_1 = Array{TC}(undef, dim, n_excitedDOF)
